@@ -30,8 +30,8 @@ function install_node() {
     alignedlayerd init $MONIKER --chain-id alignedlayer
     
     # 安装创世文件
-    wget -O $HOME/.alignedlayer/config/genesis.json https://snap.nodex.one/alignedlayer-testnet/genesis.json
-    wget -O $HOME/.alignedlayer/config/addrbook.json https://services.staketab.org/aligned-testnet/addrbook.json
+   curl -Ls https://raw.githubusercontent.com/molla202/AlignedLayer/main/genesis.json > $HOME/.alignedlayer/config/genesis.json
+   curl -Ls https://raw.githubusercontent.com/molla202/AlignedLayer/main/addrbook.json > $HOME/.alignedlayer/config/addrbook.json
     
     # 设置配置文件
     SEEDS="d1d43cc7c7aef715957289fd96a114ecaa7ba756@testnet-seeds.nodex.one:24210"
