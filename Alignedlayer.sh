@@ -131,7 +131,7 @@ function delegate_stake() {
     read -p "请输入质押代币数量: " math
     validator=$(alignedlayerd keys show $wallet_name --bech val -a)
     # read -p "请输入质押给谁(默认为自己:$validator): " validator_addr
-    $validator_addr=$validator
+    validator_addr=$validator
     alignedlayerd tx staking delegate $validator_addr ${math}stake \
     --from $wallet_name --chain-id alignedlayer \
     --fees 50stake
